@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get '/signup' => 'users_controller#new'
+
+  post '/signup/create' => 'users_controller#create'
+
+  get '/books/:id' => 'books_controller#show'
+
+  get '/books' => 'books_controller#index'
+
+  get '/purchase_books' => 'puchase_pages_controller#index'
+
   root to: 'index_controller#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
