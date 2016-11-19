@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   post '/signin' => 'index#create'
 
+  get '/logout' => 'index#destroy'
+
   get '/books/:id' => 'books#show'
 
   get '/books' => 'books#index'
