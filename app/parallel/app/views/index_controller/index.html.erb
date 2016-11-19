@@ -4,7 +4,7 @@
   </video>
 
 
-  <form class="form-signin">
+  <form class="form-signin" >
     <h2 class="form-signin-heading">Please sign in</h2>
     <input type="text" id="username" style="margin-bottom:5px" class="form-control" placeholder="Username" required autofocus>
     <input type="password" id="password" class="form-control" placeholder="Password" required>
@@ -15,5 +15,13 @@
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   </form>
+
+  <%= form_for :user, class: "form-signin"  do |u| %>
+    <%= u.text_field :email, id: "username", style: "margin-bottom:5px", class: "form-control", placeholder: "Username", required: true, autofocus: true %>
+    <%= u.text_field :password, id: "password", class: "form-control", placeholder: "Password", type: 'password', required: true %>
+    <%= u.submit "Sign In", class: "btn btn-lg btn-primary btn-block" %>
+  <% end %>
+
+
 
 </div>
