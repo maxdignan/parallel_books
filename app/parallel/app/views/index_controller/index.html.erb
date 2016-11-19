@@ -17,9 +17,16 @@
     <p>Don't have an account? <a href="./signup"> Sign Up</a> </p>
   </form>
 
-  <%= form_for :user, class: "form-signin"  do |u| %>
+  <%= form_for :user, class: "form-signin", id: 'login'  do |u| %>
     <%= u.text_field :email, id: "username", style: "margin-bottom:5px", class: "form-control", placeholder: "Username", required: true, autofocus: true %>
     <%= u.text_field :password, id: "password", class: "form-control", placeholder: "Password", type: 'password', required: true %>
+    <%= u.submit "Sign In", class: "btn btn-lg btn-primary btn-block" %>
+  <% end %>
+
+  <%= form_for :user, class: "form-signin", id: 'signup'  do |u| %>
+    <%= u.text_field :email, id: "username", style: "margin-bottom:5px", class: "form-control", placeholder: "Username", required: true, autofocus: true %>
+    <%= u.text_field :password, id: "password", class: "form-control", placeholder: "Password", type: 'password', required: true %>
+    <%= u.text_field :password_confirmation, id: "password", class: "form-control", placeholder: "Password Confirmation", type: 'password', required: true %>
     <%= u.submit "Sign In", class: "btn btn-lg btn-primary btn-block" %>
   <% end %>
 
