@@ -11,7 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161119171952) do
+ActiveRecord::Schema.define(version: 20161119201103) do
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title"
+    t.string   "img"
+    t.string   "pdf"
+    t.float    "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "checkouts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "book"
+    t.integer  "user"
+    t.integer  "key"
+  end
+
+  add_index "checkouts", ["book"], name: "index_checkouts_on_book"
+  add_index "checkouts", ["key"], name: "index_checkouts_on_key"
+  add_index "checkouts", ["user"], name: "index_checkouts_on_user"
+
+  create_table "keys", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "book"
+  end
+
+  add_index "keys", ["book"], name: "index_keys_on_book"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +48,11 @@ ActiveRecord::Schema.define(version: 20161119171952) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "users_books", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "book_id"
   end
 
 end
