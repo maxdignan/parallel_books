@@ -1,5 +1,6 @@
 class PurchasePagesController < ApplicationController
   def index
-    books = Book.all
+    @books = Book.all
+    byebug
   end
 end

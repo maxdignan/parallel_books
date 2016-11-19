@@ -14,8 +14,8 @@ User.create([
 ])
 
 Book.create([
-  {title: 'automation-and-robotics', img: 'automation-and-robotics.jpg', pdf: 'automation-and-robotics.pdf', price: 20.0},
-  {title: 'basics-of-accounting-information-processing', img: 'basics-of-accounting-information-processing.jpg', pdf: 'basics-of-accounting-information-processing.pdf', price: 20.0},
+  {title: 'Automation and Robotics', img: 'automation-and-robotics.jpg', pdf: 'automation-and-robotics.pdf', price: 20.0},
+  {title: 'Basics of Accounting-information-processing', img: 'basics-of-accounting-information-processing.jpg', pdf: 'basics-of-accounting-information-processing.pdf', price: 20.0},
   {title: 'cost-analysis', img: 'cost-analysis.jpg', pdf: 'cost-analysis.pdf', price: 19.50},
   {title: 'english', img: 'english.jpg', pdf: 'english.pdf', price: 19.50},
   {title: 'essential-study-skills.jpg', img: 'essential-study-skills.jpg', pdf: 'essential-study-skills.pdf', price: 19.50},

@@ -29,9 +29,9 @@
     <td>$0.23</td>
     <td style="color:green">2/3 <br/><a style="color:blue;">checkout</a></td>
   </tr>
-<% @books.each do |title| %>
+<% @books.each do |book| %>
   <tr>
-    <td><%= title %><td>
+    <td><%= book.title %><td>
   </tr>
 <% end %>
 </table>
