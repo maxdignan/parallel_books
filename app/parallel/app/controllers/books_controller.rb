@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.where(user: user)
+    @books = Book.all
+    @books = @books.map { |book| book.users.includes(user) }
   end
 
   def show

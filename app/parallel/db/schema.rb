@@ -22,11 +22,6 @@ ActiveRecord::Schema.define(version: 20161119201103) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "books_users", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "book_id"
-  end
-
   create_table "checkouts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -53,6 +48,11 @@ ActiveRecord::Schema.define(version: 20161119201103) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "users_books", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "book_id"
   end
 
 end
