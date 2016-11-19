@@ -1,7 +1,6 @@
 class BooksController < ApplicationController
   def index
     @books = Book.all
-    @books = @books.map { |book| book.users.includes(user) }
   end
 
   def show

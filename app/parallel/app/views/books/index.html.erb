@@ -1,14 +1,37 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
-
-<table>
+<table class="table table-striped table-hover">
+  <form id="custom-search-form" class="form-search form-horizontal pull-right">
+                 <div class="input-append span12">
+                     <input type="text" class="search-query" placeholder="Search">
+                     <button type="submit" class="btn"><i class="icon-search"></i></button>
+                 </div>
+             </form>
   <tr>
-    <th>field1</th>
-    <th>field2</th>
+    <th>Title<th>
+    <th>IBSN</th>
+    <th>Price</th>
+    <th>Available</th>
   </tr>
-<% @books.each do |data| %>
   <tr>
-    <td><%= name %><td>
+    <td><img class="bookImg" src="https://images-na.ssl-images-amazon.com/images/I/31G-3fXHZRL._BO1,204,203,200_.jpg" alt="Smiley face">Alan Cline (auth.)-Agile Development in the Real World-Apress (2015)<td>
+    <td>978-1-4842-1679-8</td>
+    <td>$0.23</td>
+    <td style="color:green">1/1<br/><a style="color:blue;">checkout</a></td>
+  </tr>
+  <tr>
+    <td><img class="bookImg" src="https://images-na.ssl-images-amazon.com/images/I/31G-3fXHZRL._BO1,204,203,200_.jpg" alt="Smiley face" height="128" width="128">Alan Cline (auth.)-Agile Development in the Real World-Apress (2015)<td>
+    <td>978-1-4842-1679-8</td>
+    <td>$0.23</td>
+    <td style="color:red">0/12<br/><a style="color:blue;">checkout</a></td>
+  </tr>
+  <tr>
+    <td><img class="bookImg" src="https://images-na.ssl-images-amazon.com/images/I/31G-3fXHZRL._BO1,204,203,200_.jpg" alt="Smiley face" height="128" width="128">Alan Cline (auth.)-Agile Development in the Real World-Apress (2015)<td>
+    <td>978-1-4842-1679-8</td>
+    <td>$0.23</td>
+    <td style="color:green">2/3 <br/><a style="color:blue;">checkout</a></td>
+  </tr>
+<% @books.each do |title| %>
+  <tr>
+    <td><%= title %><td>
   </tr>
 <% end %>
 </table>
