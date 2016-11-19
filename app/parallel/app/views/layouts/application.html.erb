@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Parallel</title>
+  <title>Parallel Books</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="page-header">
+
+    <img alt="logo" src="./images/logo.png" height="25px" width="25px" style="float:left; margin-left:25px;">
+    <h1  style="float:right; margin-right:25px; ">Parallel Books<h1>
+    <br/>
+  </header>
 
 <%= yield %>
 
