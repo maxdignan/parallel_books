@@ -16,14 +16,14 @@ User.create([
 Book.create([
   {title: 'Automation and Robotics', img: 'automation-and-robotics.jpg', pdf: 'automation-and-robotics.pdf', price: 20.0},
   {title: 'Basics of Accounting-information-processing', img: 'basics-of-accounting-information-processing.jpg', pdf: 'basics-of-accounting-information-processing.pdf', price: 20.0},
-  {title: 'cost-analysis', img: 'cost-analysis.jpg', pdf: 'cost-analysis.pdf', price: 19.50},
-  {title: 'english', img: 'english.jpg', pdf: 'english.pdf', price: 19.50},
-  {title: 'essential-study-skills.jpg', img: 'essential-study-skills.jpg', pdf: 'essential-study-skills.pdf', price: 19.50},
-  {title: 'how-to-write-an-essay', img: 'how-to-write-an-essay.jpg', pdf: 'how-to-write-an-essay.pdf', price: 19.50},
-  {title: 'hrm-managing-the-human-ressource', img: 'hrm-managing-the-human-ressource.jpg', pdf: 'hrm-managing-the-human-ressource.pdf', price: 19.50},
-  {title: 'innovative-service-design-workbook', img: 'innovative-service-design-workbook.jpg', pdf: 'innovative-service-design-workbook.pdf', price: 19.50},
-  {title: 'modern-microeconomics', img: 'modern-microeconomics.jpg', pdf: 'modern-microeconomics.pdf', price: 19.50},
-  {title: 'technology-based-entrepreneurship', img: 'technology-based-entrepreneurship.jpg', pdf: 'technology-based-entrepreneurship.pdf', price: 19.50},
-  {title: 'working-capital-strategic-management-exercises', img: 'working-capital-strategic-management-exercises.jpg', pdf: 'working-capital-strategic-management-exercises.pdf', price: 19.50},
+  {title: 'Cost Analysis', img: 'cost-analysis.jpg', pdf: 'cost-analysis.pdf', price: 19.50},
+  {title: 'English', img: 'english', pdf: 'english.pdf', price: 19.50},
+  {title: 'Essential Study Skills', img: 'essential-study-skills.jpg', pdf: 'essential-study-skills.pdf', price: 19.50},
+  {title: 'How to Write an Essay', img: 'how-to-write-an-essay.jpg', pdf: 'how-to-write-an-essay.pdf', price: 19.50},
+  {title: 'HRM Managing the Human Ressource', img: 'hrm-managing-the-human-ressource.jpg', pdf: 'hrm-managing-the-human-ressource.pdf', price: 19.50},
+  {title: 'Innovative Service Design Workbook', img: 'innovative-service-design-workbook.jpg', pdf: 'innovative-service-design-workbook.pdf', price: 19.50},
+  {title: 'Modern Microeconomics', img: 'modern-microeconomics.jpg', pdf: 'modern-microeconomics.pdf', price: 19.50},
+  {title: 'Technology Based-Entrepreneurship', img: 'technology-based-entrepreneurship.jpg', pdf: 'technology-based-entrepreneurship.pdf', price: 19.50},
+  {title: 'Working Capital Strategic Management Exercises', img: 'working-capital-strategic-management-exercises.jpg', pdf: 'working-capital-strategic-management-exercises.pdf', price: 19.50},
 
 ])
