@@ -1,6 +1,6 @@
 class AddJoinUsersBooks < ActiveRecord::Migration
   def change
-    create_table :users_books do |t|
+    create_table :books_users do |t|
       t.integer :user_id
       t.integer :book_id
     end

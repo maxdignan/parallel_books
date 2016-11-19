@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    books = Book.where()
+    @books = Book.where(user: user)
   end
 
   def show

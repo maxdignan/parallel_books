@@ -24,6 +24,11 @@ body {
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
+
+.form-signin .signin-switch{
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
 .form-signin .checkbox {
   font-weight: normal;
 }

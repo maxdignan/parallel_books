@@ -4,7 +4,7 @@
   </video>
 
   <%= form_for :user, :html => {class: "form-signin", id: 'login'}, method: 'POST', url: '/signin'  do |u| %>
-    <h2 class="form-signin-heading">Login In</h2>
+    <h2 class="form-signin-heading">Login</h2>
     <%= u.text_field :email, id: "username", style: "margin-bottom:5px", class: "form-control", placeholder: "Username", required: true, autofocus: true %>
     <%= u.text_field :password, id: "password", class: "form-control", placeholder: "Password", type: 'password', required: true %>
     <div class="checkbox">
@@ -12,8 +12,8 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <%= u.submit "Sign In", class: "btn btn-lg btn-primary btn-block" %>
-    <p>Don't have an account? <a id="openSignup"> Sign Up</a> </p>
+    <%= u.submit "Login", class: "btn btn-lg btn-primary btn-block" %>
+    <p class="signin-switch">Don't have an account? <a id="openSignup"> Sign Up</a> </p>
   <% end %>
 
   <%= form_for :user, :html => {class: "form-signin", id: 'signup'}, method: 'POST', url: '/signup/create'  do |u| %>
@@ -21,8 +21,8 @@
     <%= u.text_field :email, id: "username", style: "margin-bottom:5px", class: "form-control", placeholder: "Username", required: true, autofocus: true %>
     <%= u.text_field :password, id: "password", class: "form-control", placeholder: "Password", type: 'password', required: true %>
     <%= u.text_field :password_confirmation, id: "password", class: "form-control", placeholder: "Password Confirmation", type: 'password', required: true %>
-    <%= u.submit "Sign In", class: "btn btn-lg btn-primary btn-block" %>
-    <p>Already have an account? <a id="openLogin">Login</a> </p>
+    <%= u.submit "Sign Up", class: "btn btn-lg btn-primary btn-block" %>
+    <p class="signin-switch">Already have an account? <a id="openLogin">Login</a> </p>
   <% end %>
 
 
