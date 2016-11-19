@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/books' => 'books#index'
 
-  get '/purchase_books' => 'puchase_pages#index'
+  get '/purchase_books' => 'purchase_pages#index'
 
   root to: 'index#index'
 

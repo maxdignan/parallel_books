@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def user
     User.find session[:user_id]
   end
+
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
 end
