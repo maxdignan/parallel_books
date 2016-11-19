@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get '/signup' => 'users_controller#new'
+  get '/signup' => 'users#new'
 
-  post '/signup/create' => 'users_controller#create'
+  post '/signup/create' => 'users#create'
 
-  get '/books/:id' => 'books_controller#show'
+  get '/books/:id' => 'books#show'
 
-  get '/books' => 'books_controller#index'
+  get '/books' => 'books#index'
 
-  get '/purchase_books' => 'puchase_pages_controller#index'
+  get '/purchase_books' => 'puchase_pages#index'
 
   root to: 'index_controller#index'
 
