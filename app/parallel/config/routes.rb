@@ -3,13 +3,15 @@ Rails.application.routes.draw do
 
   post '/signup/create' => 'users#create'
 
+  post '/signin' => 'index#create'
+
   get '/books/:id' => 'books#show'
 
   get '/books' => 'books#index'
 
   get '/purchase_books' => 'puchase_pages#index'
 
-  root to: 'index_controller#index'
+  root to: 'index#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
