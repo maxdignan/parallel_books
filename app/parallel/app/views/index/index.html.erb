@@ -1,0 +1,30 @@
+<div class="container">
+  <video autoplay loop muted>
+    <source src="./videos/osu.mp4" type="video/mp4">
+  </video>
+
+  <%= form_for :user, :html => {class: "form-signin", id: 'login'}, method: 'POST', url: '/signin'  do |u| %>
+    <h2 class="form-signin-heading">Login In</h2>
+    <%= u.text_field :email, id: "username", style: "margin-bottom:5px", class: "form-control", placeholder: "Username", required: true, autofocus: true %>
+    <%= u.text_field :password, id: "password", class: "form-control", placeholder: "Password", type: 'password', required: true %>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <%= u.submit "Sign In", class: "btn btn-lg btn-primary btn-block" %>
+    <p>Don't have an account? <a> Sign Up</a> </p>
+  <% end %>
+
+  <%= form_for :user, :html => {class: "form-signin", id: 'login'}, method: 'POST', url: '/signup/create'  do |u| %>
+    <h2 class="form-signin-heading">Sign Up</h2>
+    <%= u.text_field :email, id: "username", style: "margin-bottom:5px", class: "form-control", placeholder: "Username", required: true, autofocus: true %>
+    <%= u.text_field :password, id: "password", class: "form-control", placeholder: "Password", type: 'password', required: true %>
+    <%= u.text_field :password_confirmation, id: "password", class: "form-control", placeholder: "Password Confirmation", type: 'password', required: true %>
+    <%= u.submit "Sign In", class: "btn btn-lg btn-primary btn-block" %>
+    <p>Already have an account? <a>Login</a> </p>
+  <% end %>
+
+
+
+</div>
