@@ -10,7 +10,6 @@ class BooksController < ApplicationController
   end
 
   def buy_book
-    user.books << Book.find params[:id]
   end
 
   def checkout_book

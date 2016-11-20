@@ -26,6 +26,16 @@
   width:100px;
 }
 
+#container{
+  margin-top: 10px;
+}
+
+.search-query{
+  width:95%;
+  left:2.5%;
+  position: absolute;
+}
+
 .title{
   color: #363636;
   font-size: 1vw;
@@ -44,6 +54,10 @@
 
 .isbn{
   margin-top: 10px;
+}
+
+#custom-search-form{
+  width: 100%;
 }
 
 .price{

@@ -1,7 +1,6 @@
 <form id="custom-search-form" class="form-search form-horizontal pull-right">
       <div class="input-append span12">
           <input type="text" class="search-query" placeholder="Search">
-          <button type="submit" class="btn"><i class="icon-search"></i></button>
        </div>
 </form>
 <br/>
@@ -9,6 +8,7 @@
   <h6 class="resultsNumber"><%= @books.length %> results</h6>
   <div class="row">
   <% @books.each do |book| %>
+    <a href="/books/<%= book.id %>" >
       <div class="recordOutter col-sm-4">
       <div class="record">
           <div class="recordLeft">
@@ -23,6 +23,7 @@
         </div>
       </div>
     </div>
+  </a>
   <% end %>
 </div>
 </div>
