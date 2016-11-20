@@ -1,12 +1,17 @@
-// Place all the styles related to the books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(220,220,220,1) !important;
+#listView {
+   position: relative;
+   width: 100%;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+.record{
+  width: 500px;
+  height:220px;
+  margin: auto;
+  list-style: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.recordOutter :hover{
   background-color: rgba(200,200,200,1);
 }
 
@@ -16,40 +21,69 @@
   width:140px;
 }
 
-#custom-search-form {
-    margin:0;
-    margin-top: 5px;
-    padding: 0;
+.resultsNumber{
+  margin: auto;
+  width:100px;
 }
 
-#custom-search-form .search-query {
-    padding-right: 3px;
-    padding-right: 4px \9;
-    padding-left: 3px;
-    padding-left: 4px \9;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
-
-    margin-bottom: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+#container{
+  margin-top: 10px;
 }
 
-#custom-search-form button {
-    border: 0;
-    background: none;
-    /** belows styles are working good */
-    padding: 2px 5px;
-    margin-top: 2px;
-    position: relative;
-    left: -28px;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
-    margin-bottom: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+.search-query{
+  width:95%;
+  left:2.5%;
+  position: absolute;
 }
 
-.search-query:focus + button {
-    z-index: 3;
+.title{
+  color: #363636;
+  font-size: 1vw;
+  font-family: GillSans,arial,sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.author{
+  color: #737373;
+  font-size: 16px;
+  font-family: GillSans,arial,sans-serif;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.isbn{
+  margin-top: 10px;
+}
+
+#custom-search-form{
+  width: 100%;
+}
+
+.price{
+  position: absolute;
+  bottom:5px;
+}
+
+.recordLeft{
+  float: left;
+  background-color: inherit;
+}
+.recordRight{
+  float: left;
+  position: relative;
+  height: 100%;
+  background-color: inherit;
+}
+
+.recordRightBottom{
+  position: absolute;
+  bottom: 0px;
+  background-color: inherit;
+}
+
+.bookImg{
+  margin:10px;
+  height:198px;
+  width:140px;
 }
