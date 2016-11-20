@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get '/purchase_books' => 'purchase_pages#index'
 
+  get '/buy_book/:id' => 'books#buy_book'
+
   root to: 'index#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

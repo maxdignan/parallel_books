@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :protect_routes
 
   def index
-    @books = Book.all
+    @books = user.books
   end
 
   def show
@@ -10,7 +10,8 @@ class BooksController < ApplicationController
   end
 
   def buy_book
-    user.books << Book.find params[:id]
+    user.books << Book.find(params[:id])
+    redirect_to '/books'
   end
 
   def checkout_book

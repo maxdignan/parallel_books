@@ -3,5 +3,6 @@ class PurchasePagesController < ApplicationController
 
   def index
     @books = Book.all
+    @on_purchase_page = true
   end
 end
