@@ -4,7 +4,9 @@ class Key < ActiveRecord::Base
 
   class << self
     def next_key_for_book book
-      self.where(book: book, checkout: nil)
+      all_keys_for_book = where(book: book)
+      all_keys_for_book = all_keys_for_book.reject { |key| key.checkout.present? }
+      all_keys_for_book.first
     end
   end
 end

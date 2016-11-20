@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120002131) do
+ActiveRecord::Schema.define(version: 20161120044703) do
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
@@ -32,22 +32,22 @@ ActiveRecord::Schema.define(version: 20161120002131) do
   create_table "checkouts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "book"
-    t.integer  "user"
-    t.integer  "key"
+    t.integer  "book_id"
+    t.integer  "user_id"
+    t.integer  "key_id"
   end
 
-  add_index "checkouts", ["book"], name: "index_checkouts_on_book"
-  add_index "checkouts", ["key"], name: "index_checkouts_on_key"
-  add_index "checkouts", ["user"], name: "index_checkouts_on_user"
+  add_index "checkouts", ["book_id"], name: "index_checkouts_on_book_id"
+  add_index "checkouts", ["key_id"], name: "index_checkouts_on_key_id"
+  add_index "checkouts", ["user_id"], name: "index_checkouts_on_user_id"
 
   create_table "keys", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "book"
+    t.integer  "book_id"
   end
 
-  add_index "keys", ["book"], name: "index_keys_on_book"
+  add_index "keys", ["book_id"], name: "index_keys_on_book_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

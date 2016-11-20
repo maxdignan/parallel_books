@@ -3,10 +3,16 @@ class BooksController < ApplicationController
 
   def index
     @books = user.books
+    @on_my_books_page = true
   end
 
   def show
-    book = Book.find params[:id]
+    if checkout_book == false
+      redirect_to '/books'
+      return
+    end
+
+    @book = Book.find params[:id]
   end
 
   def buy_book
@@ -20,21 +26,22 @@ class BooksController < ApplicationController
     book = Book.find params[:id]
     if user.books.include? book
 
-      def checkout_book
+      def get_book_inner(book)
         next_key = Key.next_key_for_book(book)
         Checkout.create(key: next_key, user: user, book: book)
       end
 
-      if book.keys > book.checkouts
+      if book.keys.length > book.checkouts.length
         #create checkout
-        checkout_book
+        get_book_inner(book)
       else
         #buy key
         Key.create book: book
-        checkout_book
+        get_book_inner(book)
       end
     else
       flash[:not_purchased_error] = "You don't own this book."
+      return false
     end
   end
 
@@ -45,7 +52,7 @@ class BooksController < ApplicationController
   private
 
   def remove_existing_checkouts_for_user user
-    existing_checkouts = Checkout.where(user: user)
-    existing_checkout.each(&:destroy) if existing_checkout.empty?
+    existing_checkouts = Checkout.where(user: user.id)
+    existing_checkouts.each(&:destroy) if existing_checkouts.empty?
   end
 end
