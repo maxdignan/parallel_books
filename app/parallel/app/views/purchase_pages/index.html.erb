@@ -5,10 +5,11 @@
        </div>
 </form>
 <br/>
-<div id="listView">
+<div id="container">
   <h6 class="resultsNumber"><%= @books.length %> results</h6>
+  <div class="row">
   <% @books.each do |book| %>
-      <div class="recordOutter">
+      <div class="recordOutter col-sm-4">
       <div class="record">
           <div class="recordLeft">
             <img class="bookImg" src="/images/<%= book.img %>">
@@ -23,4 +24,5 @@
       </div>
     </div>
   <% end %>
+</div>
 </div>
