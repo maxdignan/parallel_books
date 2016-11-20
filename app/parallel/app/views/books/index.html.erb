@@ -5,7 +5,7 @@
             <button type="submit" class="btn"><i class="icon-search"></i></button>
          </div>
   </form>
-<h6>&nbsp; 1 - <%= @books.length %> of <%= @books.length %> results</h6>
+<h6>&nbsp;<%= @books.length %> results</h6>
 <% @books.each do |book| %>
     <tr>
         <td><a href="/books/<%= book.id %>" ><img class="bookImg" src="/images/<%= book.img %>"></a></td>
