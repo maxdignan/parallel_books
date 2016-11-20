@@ -1,3 +1,23 @@
-// Place all the styles related to the purchase_page controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#listView {
+   position: relative;
+   width: 100%;
+}
+
+.record{
+  width: 500px;
+  margin: auto;
+  list-style: none;
+}
+
+.bookImg{
+  margin: auto;
+  position: relative;
+  width: 130px;
+}
+
+.title {
+  font-family: GillSans,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  float: right;
+}
