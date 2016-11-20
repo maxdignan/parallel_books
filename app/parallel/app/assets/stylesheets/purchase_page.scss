@@ -5,19 +5,71 @@
 
 .record{
   width: 500px;
+  height:220px;
   margin: auto;
   list-style: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.recordOutter :hover{
+  background-color: rgba(200,200,200,1);
 }
 
 .bookImg{
-  margin: auto;
-  position: relative;
-  width: 130px;
+  margin:10px;
+  height:198px;
+  width:140px;
 }
 
-.title {
-  font-family: GillSans,Arial,sans-serif;
+.resultsNumber{
+  margin: auto;
+  width:100px;
+}
+
+.title{
+  color: #363636;
+  font-size: 18px;
+  font-family: GillSans,arial,sans-serif;
   font-weight: 500;
+  margin-top: 10px;
+}
+
+.author{
+  color: #737373;
   font-size: 16px;
-  float: right;
+  font-family: GillSans,arial,sans-serif;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.isbn{
+  margin-top: 10px;
+}
+
+.price{
+  position: absolute;
+  bottom:5px;
+}
+
+.recordLeft{
+  float: left;
+  background-color: inherit;
+}
+.recordRight{
+  float: left;
+  position: relative;
+  height: 100%;
+  background-color: inherit;
+}
+
+.recordRightBottom{
+  position: absolute;
+  bottom: 0px;
+  background-color: inherit;
+}
+
+.bookImg{
+  margin:10px;
+  height:198px;
+  width:140px;
 }

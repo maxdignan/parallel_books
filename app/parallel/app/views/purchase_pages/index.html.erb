@@ -4,18 +4,23 @@
           <button type="submit" class="btn"><i class="icon-search"></i></button>
        </div>
 </form>
-<!-- <h6>&nbsp; 1 - <%= @books.length %> of <%= @books.length %> results</h6> -->
-<ul id="listView">
+<br/>
+<div id="listView">
+  <h6 class="resultsNumber"><%= @books.length %> results</h6>
   <% @books.each do |book| %>
-      <li class="record">
-          <div>
+      <div class="recordOutter">
+      <div class="record">
+          <div class="recordLeft">
             <img class="bookImg" src="/images/<%= book.img %>">
           </div>
-          <div>
-            <h6 class="title"><%= book.title %></h6>
-            <h6><%= book.isbn %></h6>
-          </div>
-      </li>
-      <br />
+          <div class="recordRight">
+            <p class="title"><%= book.title %></p>
+            <p class="isbn"><span class="author">Author: </span> <%= book.author %></p>
+
+            <p class="isbn"><span class="author">ISBN13:</span> <%= book.isbn %></p>
+            <p class="price">$<%= book.price %></p>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
