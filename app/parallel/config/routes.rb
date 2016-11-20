@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'notes/personal'
+
+  get 'notes/public'
+
+  post 'notes/create'
+
   get '/signup' => 'users#new'
 
   post '/signup/create' => 'users#create'
@@ -17,6 +23,9 @@ Rails.application.routes.draw do
 
   root to: 'index#index'
 
+  get '/static_pages/viewer.html:all' => 'statics#pdf_viewer'
+
+  get '/load_pdf/:id' => 'books#load_pdf'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

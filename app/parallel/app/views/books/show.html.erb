@@ -1,2 +1,14 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<% require "cgi" %>
+<div class="container" id="pdfArea">
+  <div class="row full_height">
+    <div class="pdf-holder col-lg-8 col-md-9 col-sm-12 col-xs-12">
+      <iframe src="/static_pages/viewer.html<%= CGI::escape('&file=/load_pdf/' + @book.id.to_s) %>" height="100%" width="100%"></iframe>
+    </div>
+    <div class="notes-holder col-lg-4 col-md-3 col-sm-0 col-xs-0">
+      <h2 id="privateNoteButton" class="btn btn-primary">Personal</h2><h2 id="publicNoteButton" class="btn btn-primary">Public</h2>
+      <input type="text" name="note_text" id="noteText" class="form-control" placeholder="Note Down Something Interesting" ><h2 id="newNote" class="btn btn-primary">Add Note</h2>
+      <ul id="notePlace">
+      </ul>
+    </div>
+  </div>
+</div>

@@ -15,12 +15,24 @@ class BooksController < ApplicationController
     @book = Book.find params[:id]
   end
 
+  def load_pdf
+    @book = Book.find params[:id]
+    user.reload
+    if user.checkout.book == @book
+      # response.header = 'application/pdf'
+      send_data File.read('./app/protected/' + @book.pdf.gsub('-', '')), type: 'application/pdf'
+      return
+    end
+    redirect_to '/books'
+  end
+
   def buy_book
     user.books << Book.find(params[:id])
     redirect_to '/books'
   end
 
   def checkout_book
+    # byebug
     remove_existing_checkouts_for_user user
 
     book = Book.find params[:id]
@@ -52,7 +64,7 @@ class BooksController < ApplicationController
   private
 
   def remove_existing_checkouts_for_user user
-    existing_checkouts = Checkout.where(user: user.id)
-    existing_checkouts.each(&:destroy) if existing_checkouts.empty?
+    existing_checkouts = Checkout.where(user: user)
+    existing_checkouts.each(&:destroy) unless existing_checkouts.empty?
   end
 end

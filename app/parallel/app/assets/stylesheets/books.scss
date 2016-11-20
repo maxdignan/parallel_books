@@ -87,3 +87,55 @@
   height:198px;
   width:140px;
 }
+
+.pdf-holder {
+  height: 100%;
+  width: 66%;
+  max-width: 66%;
+}
+
+.notes-holder {
+  height: 100%;
+  width: 34%;
+  max-width: 34%;
+  opacity: 0.7;
+  background-color: #ECE63D;
+}
+
+.full_height {
+  height: 100%;
+}
+
+.top {
+  z-index: 1000000;
+}
+
+#noteText {
+  margin-top: 15px;
+}
+
+#newNote {
+  width: 100%;
+}
+
+#privateNoteButton {
+  width: 49%;
+  margin-right: 1%;
+}
+
+#publicNoteButton {
+  width: 49%;
+  margin-left: 1%;
+}
+
+#notePlace {
+  margin-top: 15px;
+  list-style: none;
+  height: 100%;
+  overflow:hidden;
+  overflow-y:scroll;
+}
+
+.items {
+  background-color: silver !important;
+}
