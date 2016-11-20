@@ -1,6 +1,7 @@
 class IndexController < ApplicationController
   def index
     redirect_to '/books' if @user.present?
+    @on_index = true
   end
 
   def create

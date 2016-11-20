@@ -14,7 +14,7 @@
       <h1 style=""><span style="font-style: italic;"><span style="color:orange;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l</span>Parallel Books</span></h1>
       <% if @user.present? && @on_my_books_page.present? %>
         <a style="margin-top:39px;" href="/purchase_books">Get More Books</a>
-      <% else %>
+      <% elsif @on_index.nil? %>
         <a style="margin-top:39px;" href="/books">My Books</a>
       <% end %>
   </header><hr style="margin:0px;border-color:rgba(200,200,200,1);" />

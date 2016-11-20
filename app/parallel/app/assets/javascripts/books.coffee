@@ -55,11 +55,16 @@ ready = ->
           $notePlace.prepend(renderNote(d))
 
   personalLoad()
+  $privateNoteButton.addClass('border')
 
   $privateNoteButton.click ->
+    $privateNoteButton.addClass('border')
+    $publicNoteButton.removeClass('border')
     personalLoad()
 
   $publicNoteButton.click ->
+    $privateNoteButton.removeClass('border')
+    $publicNoteButton.addClass('border')
     publicLoad()
 
 
