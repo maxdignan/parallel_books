@@ -3,5 +3,8 @@ class PurchasePagesController < ApplicationController
 
   def index
     @books = Book.all
+    @books = @books.reject do |book|
+      book.users.include? user
+    end
   end
 end
