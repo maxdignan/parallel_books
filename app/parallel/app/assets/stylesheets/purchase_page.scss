@@ -9,6 +9,7 @@
   margin: auto;
   list-style: none;
   border-bottom: 1px solid #e5e5e5;
+  color: rgb(223,105,26);
 }
 
 .recordOutter :hover{
@@ -49,6 +50,10 @@
 .price{
   position: absolute;
   bottom:5px;
+}
+
+#priceButton :hover{
+  background-color: rgb(203,85,6);
 }
 
 .recordLeft{

@@ -18,7 +18,7 @@
             <p class="isbn"><span class="author">Author: </span> <%= book.author %></p>
 
             <p class="isbn"><span class="author">ISBN13:</span> <%= book.isbn %></p>
-            <a href="/buy_book/<%= book.id %>" class="price btn btn-primary">$<%= book.price %>  RENT NOW</a>
+            <a id="priceButton" href="/buy_book/<%= book.id %>" ><button class="price btn btn-primary">$<%= book.price %>  RENT NOW</button></a>
         </div>
       </div>
     </div>
