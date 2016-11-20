@@ -1,12 +1,12 @@
 <form id="custom-search-form" class="form-search form-horizontal pull-right">
       <div class="input-append span12">
-          <input type="text" class="search-query" placeholder="Search">
+          <input id="searchInput" type="text" class="search-query" placeholder="Search">
        </div>
 </form>
 <br/>
 <div id="container">
   <h6 class="resultsNumber"><%= @books.length %> results</h6>
-  <div class="row">
+  <div id="results" class="row">
   <% @books.each do |book| %>
       <div class="recordOutter col-sm-4">
       <div class="record">

@@ -1,6 +1,8 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
+NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
+HTMLCollection.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
 renderNote = (note) ->
   '<li class="jumbotron items">' + note.text + '</li>'
@@ -15,6 +17,19 @@ ready = ->
   $publicNoteButton = $('#publicNoteButton')
 
   AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+
+  $searchInput = $('#searchInput').on 'keyup', ->
+    text = $searchInput.val()
+
+    $results = $('#results')
+    [].forEach.call $results.children(), (chile) ->
+      console.log(chile, chile.innerHTML.indexOf(text) != -1)
+      if chile.innerHTML.indexOf(text) != -1
+        chile.style.display =  'inherit'
+      else
+        chile.style.display =  'none'
+
+
 
   $newNote.click ->
     text = $noteText.val()
