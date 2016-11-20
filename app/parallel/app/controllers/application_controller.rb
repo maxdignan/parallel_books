@@ -5,8 +5,12 @@ class ApplicationController < ActionController::Base
 
   before_action :user
 
+
   def user
-    return if session[:user_id].nil?
+    if session[:user_id].nil?
+      redirect_to '/' unless params[:controller] == 'index'
+      return
+    end
     @user ||= User.find session[:user_id]
   end
 
